@@ -16,12 +16,14 @@ namespace WerewolfClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            
             MainForm mMainForm = new MainForm();
             mMainForm.Visible = false;
             Login mLogin = new Login(mMainForm);
+            mMainForm.Addformlogin(mLogin);
             WerewolfController mControler =  WerewolfController.GetInstance();
             WerewolfModel mModel = new WerewolfModel();
+            mModel.Addserver(mLogin);
 
             // View -> Controller
             mMainForm.setController(mControler);

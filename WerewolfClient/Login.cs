@@ -12,6 +12,7 @@ namespace WerewolfClient
 {
     public partial class Login : Form, View
     {
+        public string tmp;
         private WerewolfController controller;
         private Form _mainForm;
         public Login(Form MainForm)
@@ -32,6 +33,10 @@ namespace WerewolfClient
                         {
                             _mainForm.Visible = true;
                             this.Visible = false;
+                            TbLogin.Text = "";
+                            TbPassword.Text = "";
+                            TBServer.Text = "";
+                           
                         }
                         else
                         {
@@ -41,7 +46,7 @@ namespace WerewolfClient
                     case WerewolfModel.EventEnum.SignUp:
                         if (wm.EventPayloads["Success"] == "True")
                         {
-                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -61,7 +66,8 @@ namespace WerewolfClient
         {
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignIn;
-            wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", TBServer.Text } };
+            SelectServer();
+            wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", tmp } };
             controller.ActionPerformed(wcmd);
         }
 
@@ -69,8 +75,26 @@ namespace WerewolfClient
         {
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
-            wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };
+            SelectServer();
+            wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", tmp } };
             controller.ActionPerformed(wcmd);
         }
+        private void SelectServer()
+        {
+            if (TBServer.Text == "2 Players")
+            {
+                tmp= "http://project-ile.net:2342/werewolf/";
+            }
+            if (TBServer.Text == "4 Players")
+            {
+                tmp = "http://project-ile.net:2344/werewolf/";
+            }
+            if (TBServer.Text == "16 Players")
+            {
+                tmp = "http://project-ile.net:23416/werewolf/";
+            }
+        }
+
+
     }
 }

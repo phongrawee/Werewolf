@@ -12,6 +12,7 @@ namespace WerewolfClient
 {
     class WerewolfModel : Model
     {
+        private Login formlogin;
         private AutoResetEvent _autoEvent;
         private PlayerApi _playerEP;
         private GameApi _gameEP;
@@ -44,6 +45,7 @@ namespace WerewolfClient
             NOP = 1,
             SignUp = 2,
             SignIn = 3,
+            SignOut = 77,
             JoinGame = 4,
             GameStarted = 5,
             GameStopped = 6,
@@ -97,7 +99,8 @@ namespace WerewolfClient
 
         private Boolean _isPlaying = false;
         // default base path
-        private const string BASE_PATH = "http://localhost:2343/werewolf/";
+        public string server;
+        public string BASE_PATH;
         private Action _dayVoteAction = null;
         private Action _nightVoteAction = null;
         private Action _playerAction = null;
@@ -382,6 +385,25 @@ namespace WerewolfClient
             }
             NotifyAll();
         }
+        public void SignOut(string server)
+        {
+            try
+            {
+                InitilizeModel(server);
+                List<Player> p = _playerEP.LogoutPlayer(_player.Session);
+                Console.WriteLine(_player.Session);
+                _event = EventEnum.SignOut;
+                _eventPayloads["Success"] = TRUE;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                _event = EventEnum.SignOut;
+                _eventPayloads["Success"] = FALSE;
+                _eventPayloads["Error"] = ex.ToString();
+            }
+            NotifyAll();
+        }
         public void SignUp(string server, string login, string password)
         {
             try
@@ -391,7 +413,7 @@ namespace WerewolfClient
                 _player = playerEP.AddPlayer(p);
 
                 Console.WriteLine(_player.Id);
-                _event = EventEnum.SignIn;
+                _event = EventEnum.SignUp;
                 _eventPayloads["Success"] = TRUE;
             } catch (Exception ex)
             {
@@ -484,6 +506,11 @@ namespace WerewolfClient
             //reset event
             _event = EventEnum.NOP;
             _eventPayloads.Clear();
+        }
+        public void Addserver(Login node)
+        {
+            server = node.tmp;
+            BASE_PATH = server;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace WerewolfClient
 {
     public partial class MainForm : Form, View
     {
+        private Form formlogin;
         private Timer _updateTimer;
         private WerewolfController controller;
         private Game.PeriodEnum _currentPeriod;
@@ -293,6 +294,12 @@ namespace WerewolfClient
                             }
                         }
                         break;
+                    case EventEnum.SignOut:
+                        if (wm.EventPayloads["Success"] == WerewolfModel.TRUE)
+                        {
+                            this.Visible = false;
+                            formlogin.Visible = true;
+                        }break;
                 }
                 // need to reset event
                 wm.Event = EventEnum.NOP;
@@ -398,6 +405,25 @@ namespace WerewolfClient
                 TbChatInput.Text = "";
                 controller.ActionPerformed(wcmd);
             }
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login server = (Login)formlogin;
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = WerewolfCommand.CommandEnum.SignOut;
+            wcmd.Payloads = new Dictionary<string, string>() {  { "Server", server.tmp } };
+            MessageBox.Show("LOGOUT", "Signout", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            controller.ActionPerformed(wcmd);
+        }
+        public void Addformlogin(Form login)
+        {
+           formlogin = login;
+        }
+
+        private void btnStatus_Click(object sender, EventArgs e)
+        {
+            Login server = (Login)formlogin;
+            btnStatus.Text = server.tmp;
         }
     }
 }
