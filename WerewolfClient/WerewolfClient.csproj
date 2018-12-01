@@ -102,6 +102,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\brick.jpg" />
+    <None Include="Resources\frame.jpg" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\brickwall.jpg" />
+    <None Include="Resources\brickwall2.jpg" />
+    <None Include="Resources\brickwall3.jpeg" />
+    <None Include="Resources\brickwall4.jpg" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />
