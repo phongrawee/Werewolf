@@ -61,6 +61,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnStatus = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.GBPlayers.SuspendLayout();
             this.GBChat.SuspendLayout();
             this.GBAction.SuspendLayout();
@@ -86,12 +90,12 @@
             this.GBPlayers.Controls.Add(this.BtnPlayer2);
             this.GBPlayers.Controls.Add(this.BtnPlayer1);
             this.GBPlayers.Controls.Add(this.BtnPlayer0);
-            this.GBPlayers.Location = new System.Drawing.Point(12, 12);
+            this.GBPlayers.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBPlayers.Location = new System.Drawing.Point(12, 31);
             this.GBPlayers.Name = "GBPlayers";
-            this.GBPlayers.Size = new System.Drawing.Size(387, 407);
+            this.GBPlayers.Size = new System.Drawing.Size(387, 394);
             this.GBPlayers.TabIndex = 0;
             this.GBPlayers.TabStop = false;
-            this.GBPlayers.Text = "Players";
             // 
             // BtnPlayer15
             // 
@@ -306,26 +310,25 @@
             this.GBChat.BackColor = System.Drawing.Color.Transparent;
             this.GBChat.Controls.Add(this.TbChatInput);
             this.GBChat.Controls.Add(this.TbChatBox);
-            this.GBChat.Location = new System.Drawing.Point(413, 12);
+            this.GBChat.Location = new System.Drawing.Point(413, 31);
             this.GBChat.Name = "GBChat";
             this.GBChat.Size = new System.Drawing.Size(375, 476);
             this.GBChat.TabIndex = 2;
             this.GBChat.TabStop = false;
-            this.GBChat.Text = "Chat";
             // 
             // TbChatInput
             // 
             this.TbChatInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbChatInput.Location = new System.Drawing.Point(15, 433);
             this.TbChatInput.Name = "TbChatInput";
-            this.TbChatInput.Size = new System.Drawing.Size(354, 26);
+            this.TbChatInput.Size = new System.Drawing.Size(343, 26);
             this.TbChatInput.TabIndex = 1;
             this.TbChatInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbChatInput_Enter);
             // 
             // TbChatBox
             // 
             this.TbChatBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TbChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbChatBox.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbChatBox.Location = new System.Drawing.Point(15, 19);
             this.TbChatBox.Multiline = true;
             this.TbChatBox.Name = "TbChatBox";
@@ -338,15 +341,15 @@
             this.GBAction.Controls.Add(this.BtnJoin);
             this.GBAction.Controls.Add(this.BtnAction);
             this.GBAction.Controls.Add(this.BtnVote);
-            this.GBAction.Location = new System.Drawing.Point(12, 406);
+            this.GBAction.Location = new System.Drawing.Point(12, 449);
             this.GBAction.Name = "GBAction";
             this.GBAction.Size = new System.Drawing.Size(267, 82);
             this.GBAction.TabIndex = 3;
             this.GBAction.TabStop = false;
-            this.GBAction.Text = "Action";
             // 
             // BtnJoin
             // 
+            this.BtnJoin.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnJoin.Location = new System.Drawing.Point(180, 19);
             this.BtnJoin.Name = "BtnJoin";
             this.BtnJoin.Size = new System.Drawing.Size(75, 46);
@@ -357,6 +360,7 @@
             // 
             // BtnAction
             // 
+            this.BtnAction.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAction.Location = new System.Drawing.Point(99, 19);
             this.BtnAction.Name = "BtnAction";
             this.BtnAction.Size = new System.Drawing.Size(75, 46);
@@ -367,6 +371,7 @@
             // 
             // BtnVote
             // 
+            this.BtnVote.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVote.Location = new System.Drawing.Point(18, 19);
             this.BtnVote.Name = "BtnVote";
             this.BtnVote.Size = new System.Drawing.Size(75, 46);
@@ -382,28 +387,28 @@
             this.GBStatus.Controls.Add(this.LBPeriod);
             this.GBStatus.Controls.Add(this.label2);
             this.GBStatus.Controls.Add(this.label1);
-            this.GBStatus.Location = new System.Drawing.Point(285, 406);
+            this.GBStatus.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBStatus.Location = new System.Drawing.Point(285, 448);
             this.GBStatus.Name = "GBStatus";
             this.GBStatus.Size = new System.Drawing.Size(114, 82);
             this.GBStatus.TabIndex = 8;
             this.GBStatus.TabStop = false;
-            this.GBStatus.Text = "Status";
             // 
             // LBTime
             // 
             this.LBTime.AutoSize = true;
-            this.LBTime.Location = new System.Drawing.Point(40, 52);
+            this.LBTime.Location = new System.Drawing.Point(44, 51);
             this.LBTime.Name = "LBTime";
-            this.LBTime.Size = new System.Drawing.Size(13, 13);
+            this.LBTime.Size = new System.Drawing.Size(15, 15);
             this.LBTime.TabIndex = 12;
             this.LBTime.Text = "0";
             // 
             // LBDay
             // 
             this.LBDay.AutoSize = true;
-            this.LBDay.Location = new System.Drawing.Point(40, 35);
+            this.LBDay.Location = new System.Drawing.Point(44, 36);
             this.LBDay.Name = "LBDay";
-            this.LBDay.Size = new System.Drawing.Size(13, 13);
+            this.LBDay.Size = new System.Drawing.Size(15, 15);
             this.LBDay.TabIndex = 11;
             this.LBDay.Text = "0";
             // 
@@ -412,7 +417,7 @@
             this.LBPeriod.AutoSize = true;
             this.LBPeriod.Location = new System.Drawing.Point(7, 19);
             this.LBPeriod.Name = "LBPeriod";
-            this.LBPeriod.Size = new System.Drawing.Size(44, 13);
+            this.LBPeriod.Size = new System.Drawing.Size(52, 15);
             this.LBPeriod.TabIndex = 10;
             this.LBPeriod.Text = "Night of";
             // 
@@ -421,7 +426,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(35, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "Time";
             // 
@@ -430,13 +435,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Day #";
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(712, 494);
+            this.btnLogout.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(695, 512);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(76, 36);
@@ -447,7 +453,8 @@
             // 
             // btnStatus
             // 
-            this.btnStatus.Location = new System.Drawing.Point(620, 494);
+            this.btnStatus.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatus.Location = new System.Drawing.Point(593, 512);
             this.btnStatus.Margin = new System.Windows.Forms.Padding(2);
             this.btnStatus.Name = "btnStatus";
             this.btnStatus.Size = new System.Drawing.Size(76, 36);
@@ -456,6 +463,46 @@
             this.btnStatus.UseVisualStyleBackColor = true;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Player";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(414, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Chat";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 432);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Action";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(285, 431);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Status";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +510,10 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::WerewolfClient.Properties.Resources.brick;
             this.ClientSize = new System.Drawing.Size(858, 568);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.GBStatus);
@@ -480,6 +531,7 @@
             this.GBStatus.ResumeLayout(false);
             this.GBStatus.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -517,6 +569,10 @@
         private System.Windows.Forms.Button BtnAction;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnStatus;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
