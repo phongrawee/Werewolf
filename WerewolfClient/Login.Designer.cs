@@ -49,9 +49,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(139, 229);
+            this.label1.Location = new System.Drawing.Point(185, 282);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
@@ -61,37 +62,39 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(109, 271);
+            this.label2.Location = new System.Drawing.Point(145, 334);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.Size = new System.Drawing.Size(97, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
             // TbLogin
             // 
             this.TbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbLogin.Location = new System.Drawing.Point(196, 229);
+            this.TbLogin.Location = new System.Drawing.Point(261, 282);
+            this.TbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TbLogin.Name = "TbLogin";
-            this.TbLogin.Size = new System.Drawing.Size(289, 29);
+            this.TbLogin.Size = new System.Drawing.Size(384, 34);
             this.TbLogin.TabIndex = 2;
-            this.TbLogin.Text = "keng";
             // 
             // TbPassword
             // 
             this.TbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbPassword.Location = new System.Drawing.Point(196, 271);
+            this.TbPassword.Location = new System.Drawing.Point(261, 334);
+            this.TbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.PasswordChar = '*';
-            this.TbPassword.Size = new System.Drawing.Size(289, 29);
+            this.TbPassword.Size = new System.Drawing.Size(384, 34);
             this.TbPassword.TabIndex = 3;
-            this.TbPassword.Text = "1234";
             // 
             // BtnSignIn
             // 
             this.BtnSignIn.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignIn.Location = new System.Drawing.Point(390, 317);
+            this.BtnSignIn.Location = new System.Drawing.Point(520, 390);
+            this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSignIn.Name = "BtnSignIn";
-            this.BtnSignIn.Size = new System.Drawing.Size(94, 45);
+            this.BtnSignIn.Size = new System.Drawing.Size(125, 55);
             this.BtnSignIn.TabIndex = 4;
             this.BtnSignIn.Text = "Sign In";
             this.BtnSignIn.UseVisualStyleBackColor = true;
@@ -100,9 +103,10 @@
             // BtnSignUp
             // 
             this.BtnSignUp.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignUp.Location = new System.Drawing.Point(196, 317);
+            this.BtnSignUp.Location = new System.Drawing.Point(261, 390);
+            this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSignUp.Name = "BtnSignUp";
-            this.BtnSignUp.Size = new System.Drawing.Size(94, 45);
+            this.BtnSignUp.Size = new System.Drawing.Size(125, 55);
             this.BtnSignUp.TabIndex = 5;
             this.BtnSignUp.Text = "Sign Up";
             this.BtnSignUp.UseVisualStyleBackColor = true;
@@ -113,9 +117,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(242, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(323, 90);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(177, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -126,9 +131,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(85, 192);
+            this.label3.Location = new System.Drawing.Point(113, 236);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.Size = new System.Drawing.Size(126, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "Select Server";
             // 
@@ -140,10 +146,10 @@
             "2 Players",
             "4 Players",
             "16 Players"});
-            this.TBServer.Location = new System.Drawing.Point(196, 189);
-            this.TBServer.Margin = new System.Windows.Forms.Padding(2);
+            this.TBServer.Location = new System.Drawing.Point(261, 233);
+            this.TBServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBServer.Name = "TBServer";
-            this.TBServer.Size = new System.Drawing.Size(289, 28);
+            this.TBServer.Size = new System.Drawing.Size(384, 33);
             this.TBServer.TabIndex = 9;
             // 
             // label4
@@ -152,20 +158,21 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(156, 2);
+            this.label4.Location = new System.Drawing.Point(208, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(319, 55);
+            this.label4.Size = new System.Drawing.Size(400, 69);
             this.label4.TabIndex = 10;
             this.label4.Text = "WERE WOLF";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = global::WerewolfClient.Properties.Resources.brick;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(604, 475);
+            this.ClientSize = new System.Drawing.Size(805, 585);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TBServer);
             this.Controls.Add(this.label3);
@@ -178,6 +185,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

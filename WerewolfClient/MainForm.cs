@@ -427,16 +427,28 @@ namespace WerewolfClient
 
         private void btnStatus_Click(object sender, EventArgs e)
         {
+            Login server = (Login)formlogin;
+            if(server.tmp == "http://project-ile.net:2342/werewolf/")
+            {
+                ServerBox.Text = "2 Players Server";
+            }
+            if (server.tmp == "http://project-ile.net:2344/werewolf/")
+            {
+                ServerBox.Text = "4 Players Server";
+            }
+            if (server.tmp == "http://project-ile.net:23416/werewolf/")
+            {
+                ServerBox.Text = "16 Players Server";
+            }
+
+        }
+        private void ShowRole_Click(object sender, EventArgs e)
+        {
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.test;
             //controller.ActionPerformed(wcmd);
             string name = controller.Dis();
             AddChatMessage(name);
         }
-        private void ShowRole_Click(object sender, EventArgs e)
-        {
-           
-        }
-      
     }
 }
