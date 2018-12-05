@@ -17,7 +17,7 @@ namespace WerewolfClient
         private PlayerApi _playerEP;
         private GameApi _gameEP;
         private ActionApi _actionEP;
-        private RoleApi _roleEP;
+        public RoleApi _roleEP;
         private ChatApi _chatEP;
 
         private List<Role> _roles = null;
@@ -38,7 +38,7 @@ namespace WerewolfClient
         public const string TRUE = "True";
         public const string FALSE = "False";
         private long? latestChatId = 0;
-
+         
 
         public enum EventEnum
         {
@@ -109,6 +109,7 @@ namespace WerewolfClient
         {
             _eventPayloads = new Dictionary<string, string>();
             _autoEvent = new AutoResetEvent(false);
+
         }
 
         private void InitilizeModel(string basepath)
@@ -512,5 +513,70 @@ namespace WerewolfClient
             server = node.tmp;
             BASE_PATH = server;
         }
+        public string test()
+        {         
+            string dis;
+            string name ;      
+            List<Role> role;
+            try
+            {
+                role = _roleEP.RoleGet();
+                Console.WriteLine(role[0].Description);
+                name = _player.Role.Name;
+                switch (name)
+                {
+                    case "Seer":
+                        dis = role[0].Description;
+                        return dis;
+                    case "Aura Seer":
+                        dis = role[1].Description;
+                        return dis;
+                    case "Priest":
+                        dis = role[2].Description;
+                        return dis;
+                    case "Doctor":
+                        dis = role[3].Description;
+                        return dis;
+                    case "Werewolf":
+                        dis = role[4].Description;
+                        return dis;
+                    case "Werewolf Sharman":
+                        dis = role[5].Description;
+                        return dis;
+                    case "Alpha Werewolf":
+                        dis = role[6].Description;
+                        return dis;
+                    case "Werewolf Seer":
+                        dis = role[7].Description;
+                        return dis;
+                    case "Medium":
+                        dis = role[8].Description;
+                        return dis;
+                    case "Bodyguard":
+                        dis = role[9].Description;
+                        return dis;
+                    case "Jailer":
+                        dis = role[10].Description;
+                        return dis;
+                    case "Fool":
+                        dis = role[11].Description;
+                        return dis;
+                    case "Head Hunter":
+                        dis = role[12].Description;
+                        return dis;
+                    case "Serial Killer":
+                        dis = role[13].Description;
+                        return dis;
+                        
+                }
+            }
+            catch (Exception e)
+            {
+                dis = "ERROR";
+            }
+           
+            return "ERROR";
+        }
+        
     }
 }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WerewolfAPI.Model;
 
 namespace WerewolfClient
 {
     public class WerewolfCommand : Command
     {
+       
         public new enum CommandEnum
         {
             SignUp = 1,
@@ -19,6 +21,7 @@ namespace WerewolfClient
             Vote = 7,
             Action = 8,
             Chat = 9,
+            test = 10,
         };
         public new CommandEnum Action { get; set; }
     }
@@ -76,9 +79,22 @@ namespace WerewolfClient
                         case WerewolfCommand.CommandEnum.Chat:
                             wm.Chat(cmd.Payloads["Message"]);
                             break;
+                        case WerewolfCommand.CommandEnum.test:
+                            string name = wm.test();                            
+                            break;
                     }
                 }
             }
+        }
+        public string Dis()
+        {
+            string name = "test";
+            foreach (Model m in mList)
+            {
+                WerewolfModel wm = (WerewolfModel)m;
+                name = wm.test();             
+            }
+            return name;
         }
     }
 }

@@ -11,6 +11,10 @@ using EventEnum = WerewolfClient.WerewolfModel.EventEnum;
 using CommandEnum = WerewolfClient.WerewolfCommand.CommandEnum;
 using WerewolfAPI.Model;
 using Role = WerewolfAPI.Model.Role;
+using WerewolfAPI.Api;
+using WerewolfAPI.Client;
+
+
 
 namespace WerewolfClient
 {
@@ -27,8 +31,10 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        public RoleApi _roleEP;
         public MainForm()
         {
+            
             InitializeComponent();
 
             foreach (int i in Enumerable.Range(0, 16))
@@ -411,8 +417,7 @@ namespace WerewolfClient
             Login server = (Login)formlogin;
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignOut;
-            wcmd.Payloads = new Dictionary<string, string>() {  { "Server", server.tmp } };
-            MessageBox.Show("LOGOUT", "Signout", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            wcmd.Payloads = new Dictionary<string, string>() {  { "Server", server.tmp } };        
             controller.ActionPerformed(wcmd);
         }
         public void Addformlogin(Form login)
@@ -422,8 +427,16 @@ namespace WerewolfClient
 
         private void btnStatus_Click(object sender, EventArgs e)
         {
-            Login server = (Login)formlogin;
-            btnStatus.Text = server.tmp;
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = WerewolfCommand.CommandEnum.test;
+            //controller.ActionPerformed(wcmd);
+            string name = controller.Dis();
+            AddChatMessage(name);
         }
+        private void ShowRole_Click(object sender, EventArgs e)
+        {
+           
+        }
+      
     }
 }

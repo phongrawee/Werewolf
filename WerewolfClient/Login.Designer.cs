@@ -74,6 +74,7 @@
             this.TbLogin.Name = "TbLogin";
             this.TbLogin.Size = new System.Drawing.Size(289, 29);
             this.TbLogin.TabIndex = 2;
+            this.TbLogin.Text = "keng";
             // 
             // TbPassword
             // 
@@ -83,6 +84,7 @@
             this.TbPassword.PasswordChar = '*';
             this.TbPassword.Size = new System.Drawing.Size(289, 29);
             this.TbPassword.TabIndex = 3;
+            this.TbPassword.Text = "1234";
             // 
             // BtnSignIn
             // 
@@ -148,11 +150,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Permanent Marker", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(156, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(328, 68);
+            this.label4.Size = new System.Drawing.Size(319, 55);
             this.label4.TabIndex = 10;
             this.label4.Text = "WERE WOLF";
             // 

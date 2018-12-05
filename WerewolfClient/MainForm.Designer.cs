@@ -65,6 +65,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ShowRole = new System.Windows.Forms.Button();
+            this.RoleBox = new System.Windows.Forms.Label();
             this.GBPlayers.SuspendLayout();
             this.GBChat.SuspendLayout();
             this.GBAction.SuspendLayout();
@@ -308,6 +310,7 @@
             // GBChat
             // 
             this.GBChat.BackColor = System.Drawing.Color.Transparent;
+            this.GBChat.Controls.Add(this.RoleBox);
             this.GBChat.Controls.Add(this.TbChatInput);
             this.GBChat.Controls.Add(this.TbChatBox);
             this.GBChat.Location = new System.Drawing.Point(413, 31);
@@ -335,6 +338,7 @@
             this.TbChatBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TbChatBox.Size = new System.Drawing.Size(343, 408);
             this.TbChatBox.TabIndex = 0;
+         
             // 
             // GBAction
             // 
@@ -503,13 +507,35 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Status";
             // 
+            // ShowRole
+            // 
+            this.ShowRole.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowRole.Location = new System.Drawing.Point(464, 512);
+            this.ShowRole.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowRole.Name = "ShowRole";
+            this.ShowRole.Size = new System.Drawing.Size(104, 36);
+            this.ShowRole.TabIndex = 14;
+            this.ShowRole.Text = "Show Role";
+            this.ShowRole.UseVisualStyleBackColor = true;
+            this.ShowRole.Click += new System.EventHandler(this.ShowRole_Click);
+            // 
+            // RoleBox
+            // 
+            this.RoleBox.AutoSize = true;
+            this.RoleBox.BackColor = System.Drawing.Color.White;
+            this.RoleBox.Location = new System.Drawing.Point(66, 192);
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.Size = new System.Drawing.Size(0, 13);
+            this.RoleBox.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::WerewolfClient.Properties.Resources.brick;
-            this.ClientSize = new System.Drawing.Size(858, 568);
+            this.ClientSize = new System.Drawing.Size(822, 568);
+            this.Controls.Add(this.ShowRole);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -573,6 +599,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button ShowRole;
+        private System.Windows.Forms.Label RoleBox;
     }
 }
 
